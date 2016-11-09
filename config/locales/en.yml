@@ -76,6 +76,7 @@ en:
       color: "COLOR"
       size: "SIZE"
       order_now: "Order now"
+      share: "Share"
   suggest_products:
     new:
       please_log_in: "Please Log In"
