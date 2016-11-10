@@ -82,6 +82,8 @@ en:
     quantity: "Quantity"
     name: "Name"
     empty: "Empty"
+      order_now: "Order now"
+      share: "Share"
   suggest_products:
     new:
       please_log_in: "Please Log In"

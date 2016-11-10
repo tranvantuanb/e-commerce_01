@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require_tree .
+
+$(document).on('turbolinks:load', function(){
+  var product_id = $('.fb-share-button').attr('id');
+  var data_href =location.protocol+location.host+'/products/'+product_id;
+  $('.fb-share-button').attr('data-href', data_href);
+});
