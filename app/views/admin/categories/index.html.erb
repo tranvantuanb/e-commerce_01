@@ -1,0 +1,26 @@
+<table class="table-show-user table table-hover">
+  <thead>
+  <tr>
+    <th><%= t ".category_name" %></th>
+    <th><%= t ".description" %></th>
+    <th><%= t ".left_index" %></th>
+    <th><%= t ".right_index" %></th>
+    <th><%= t ".depth" %></th>
+    <th><%= t ".edit" %></th>
+    <th><%= t ".delete" %></th>
+    <th><%= t ".add_children" %></th>
+  </tr>
+  </thead>
+  <tbody>
+    <% if @categories.any? %>
+      <%= render @categories %>
+    <% else %>
+      <div class="wrapper">
+        <a href="/admin/categories/new" class="button">
+          <%= t ".add"%>
+        </a>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+

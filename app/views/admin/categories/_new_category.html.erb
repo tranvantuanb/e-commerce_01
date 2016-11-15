@@ -1,0 +1,17 @@
+<%= form_for [:admin, @category] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= select_tag "parent_id",
+    options_for_select(@categories.collect{ |u| [u.category_name, u.id]},
+    params['parent_id']), prompt: "Root", class: "form-control" %>
+
+  <%= f.label :category_name %>
+  <%= f.text_field :category_name, class: "form-control",
+    maxlength: Settings.category_description %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, class: "form-control",
+    maxlength: Settings.category_description %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
