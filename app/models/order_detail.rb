@@ -6,6 +6,9 @@ class OrderDetail < ApplicationRecord
 
   scope :get_list_order_detail, -> order {where order_id: order.id}
 
+  def self.get_order_details order_id
+    OrderDetail.where(order_id: order_id)
+  end
   private
   def update_order_detail
     total_amount = 0
